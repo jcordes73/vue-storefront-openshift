@@ -1,26 +1,23 @@
-FROM registry.redhat.io/ubi8/nodejs-12
+FROM node:10-alpine
 
-# Create app directory
-WORKDIR /usr/src/app
+ENV VS_ENV prod
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
-COPY vue-storefront.sh /usr/local/bin/
+WORKDIR /var/www
 
-RUN npm install
-# If you are building your code for production
-# RUN npm ci --only=production
+COPY package.json ./
+COPY yarn.lock ./
 
-# Bundle app source
-RUN  mkdir app
-COPY . .
+RUN apk add --no-cache --virtual .build-deps ca-certificates wget python make g++ \
+  && apk add --no-cache git \
+  && yarn install --no-cache \
+  && apk del .build-deps
+
+COPY docker/vue-storefront/vue-storefront.sh /usr/local/bin/
 
 RUN \
-    chown -R 1001:0 /usr/src/app && \
-    chgrp -R 0 /usr/src/app && \
-    chmod -R g=u /usr/src/app
+    chown -R 1001:0 /var/www && \
+    chgrp -R 0 /var/www && \
+    chmod -R g=u /var/www
 
 EXPOSE 8080
 
