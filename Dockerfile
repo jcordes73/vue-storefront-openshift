@@ -14,6 +14,7 @@ RUN npm install --global yarn \
   && yarn add vue-gtm@2.2.0 -W \
   && yarn cache clean \
   && yarn add again -W \
+  && yarn cache clean \
   && lerna bootstrap \
   && yarn build
 
