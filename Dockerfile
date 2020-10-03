@@ -8,7 +8,7 @@ COPY . .
 
 RUN npm install --global yarn \
   && yarn global add lerna \
-  && git submodule add -b master git@github.com/DivanteLtd/vsf-default.git src/themes/default \
+  && git submodule add -b master https://github.com/DivanteLtd/vsf-default.git src/themes/default \
   && git submodule update --init --remote \
   && yarn install \
   && lerna bootstrap \
