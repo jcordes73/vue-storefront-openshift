@@ -3,8 +3,7 @@
     {
       "name": "server",
       "max_memory_restart": "1G",
-      "instances": "4",
-      "exec_mode": "cluster",
+      "instances": "1",
       "env": {
         "TS_NODE_PROJECT": "tsconfig-build.json",
         "NODE_ENV": "production"
