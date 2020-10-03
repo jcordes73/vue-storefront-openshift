@@ -1,6 +1,6 @@
-FROM node:10-alpine
+FROM node:10
 
-ENV VS_ENV prod
+ENV NODE_CONFIG_ENV=docker PM2_ARGS=--no-daemon BIND_HOST=0.0.0.0 VS_ENV=prod
 
 WORKDIR /var/www
 
@@ -8,12 +8,9 @@ COPY package.json ./
 COPY tsconfig-build.json ./
 COPY core ./
 
-RUN apk add --virtual .build-deps ca-certificates wget python make g++ \
-  && apk add git \
-  && yarn install --network-timeout 1000000 \
-#  && yarn run build --verbose \
-  && yarn run --verbose \
-  && apk del .build-deps
+RUN apt update && apt install -y git \
+  && yarn install \
+  && yarn build
 
 COPY vue-storefront.sh /usr/local/bin/
 
