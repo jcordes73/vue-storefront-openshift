@@ -5,7 +5,6 @@ ENV VS_ENV prod
 WORKDIR /var/www
 
 COPY package.json ./
-COPY yarn.lock ./
 COPY tsconfig-build.json ./
 COPY core ./
 
