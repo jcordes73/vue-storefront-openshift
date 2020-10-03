@@ -1,3 +1,3 @@
 oc new-project galaxy-prod
-oc new-app https://github.com/jcordes73/vue-storefrontend-openshift --strategy=docker
-oc expose svc vue-storefrontend-openshift
+oc new-app https://github.com/jcordes73/vue-storefront-openshift --name vue-storefront
+oc expose svc vue-storefront
