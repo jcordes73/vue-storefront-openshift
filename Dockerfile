@@ -9,10 +9,9 @@ COPY yarn.lock ./
 COPY tsconfig-build.json ./
 COPY core ./
 
-RUN apk add --no-cache --virtual .build-deps ca-certificates wget python make g++ \
-  && apk add --no-cache git \
-  && yarn install --network-timeout 1000000 --no-cache \
-  && yarn global add @vue/cli \
+RUN apk add --virtual .build-deps ca-certificates wget python make g++ \
+  && apk add git \
+  && yarn install --network-timeout 1000000 \
   && yarn run build --verbose \
   && apk del .build-deps
 
