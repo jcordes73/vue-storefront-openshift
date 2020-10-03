@@ -11,7 +11,7 @@ RUN npm install --global yarn \
   && git submodule add -b master https://github.com/DivanteLtd/vsf-default.git src/themes/default \
   && git submodule update --init --remote \
   && yarn install \
-  && year add add vue-gtm@2.2.0 \
+  && yarn add vue-gtm@2.2.0 \
   && yarn cache clean \
   && yarn install again \
   && lerna bootstrap \
