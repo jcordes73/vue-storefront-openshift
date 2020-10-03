@@ -6,6 +6,7 @@ WORKDIR /var/www
 
 COPY package.json ./
 COPY yarn.lock ./
+COPY tsconfig-build.json ./
 
 RUN apk add --no-cache --virtual .build-deps ca-certificates wget python make g++ \
   && apk add --no-cache git \
