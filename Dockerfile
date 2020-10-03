@@ -6,7 +6,8 @@ WORKDIR /var/www
 
 COPY . .
 
-RUN yarn install \
+RUN npm install --global yarn \
+  && yarn install \
   && yarn build
 
 COPY vue-storefront.sh /usr/local/bin/
