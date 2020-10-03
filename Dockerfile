@@ -11,7 +11,8 @@ COPY core ./
 RUN apk add --virtual .build-deps ca-certificates wget python make g++ \
   && apk add git \
   && yarn install --network-timeout 1000000 \
-  && yarn run build --verbose \
+#  && yarn run build --verbose \
+  && yarn run \
   && apk del .build-deps
 
 COPY vue-storefront.sh /usr/local/bin/
