@@ -8,8 +8,7 @@ COPY package.json ./
 COPY tsconfig-build.json ./
 COPY core ./
 
-RUN apt update && apt install -y git \
-  && yarn install \
+RUN yarn install \
   && yarn build
 
 COPY vue-storefront.sh /usr/local/bin/
