@@ -2,7 +2,7 @@ FROM registry.redhat.io/ubi8/nodejs-12
 
 ENV VS_ENV=prod
 
-WORKDIR /var/www
+WORKDIR /opt/app-root/src
 
 COPY . .
 
@@ -21,9 +21,9 @@ RUN npm install --global yarn \
 COPY vue-storefront.sh /usr/local/bin/
 
 RUN \
-    chown -R 1001:0 /var/www && \
-    chgrp -R 0 /var/www && \
-    chmod -R g=u /var/www
+    chown -R 1001:0 /opt/app-root/src && \
+    chgrp -R 0 /opt/app-root/src && \
+    chmod -R g=u /opt/app-root/src
 
 EXPOSE 8080
 
