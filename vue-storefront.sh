@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-yarn install || exit $?
+yarn install --verbose || exit $?
 
 if [ "$VS_ENV" = 'dev' ]; then
   yarn dev
