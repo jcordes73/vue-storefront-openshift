@@ -6,7 +6,7 @@ WORKDIR /var/www
 
 COPY . .
 
-RUN yum install -y git \
+RUN dnf install -y git \
   && yarn install \
   && yarn build
 
