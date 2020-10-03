@@ -6,8 +6,7 @@ WORKDIR /var/www
 
 COPY . .
 
-RUN dnf install -y git \
-  && yarn install \
+RUN yarn install \
   && yarn build
 
 COPY vue-storefront.sh /usr/local/bin/
