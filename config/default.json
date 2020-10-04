@@ -104,7 +104,7 @@
     "db": 0
   },
   "graphql": {
-    "host": "localhost",
+    "host": "graphql",
     "port": 8080
   },
   "api": {
