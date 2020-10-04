@@ -113,7 +113,7 @@
   },
   "elasticsearch": {
     "httpAuth": "",
-    "host": "elasticsearch/api/catalog",
+    "host": "/api/catalog",
     "index": "vue_storefront_catalog",
     "min_score": 0.02,
     "csrTimeout": 5000,
@@ -191,7 +191,7 @@
       "url": "/de",
       "appendStoreCode": true,
       "elasticsearch": {
-        "host": "elasticsearch/api/catalog",
+        "host": "/api/catalog",
         "index": "vue_storefront_catalog_de"
       },
       "tax": {
@@ -222,7 +222,7 @@
       "url": "/it",
       "appendStoreCode": true,
       "elasticsearch": {
-        "host": "elasticsearch/api/catalog",
+        "host": "/api/catalog",
         "index": "vue_storefront_catalog_it"
       },
       "tax": {
