@@ -27,6 +27,8 @@ Follow the instruction as in [Vue Storefront API](https://github.com/jcordes73/v
 ### Installing Vue Storefront
 
 	oc new-app https://github.com/jcordes73/vue-storefront-openshift --name vue-storefront --env-file=default.env
+	oc create configmap vue-storefront --from-file=config/local.json
+	oc set volumes deployments vue-storefront --add --overwrite=true --name=vue-storefront-config-volume --mount-path=/opt/app-root/src/config -t configmap --configmap-name=vue-storefront
 	oc expose svc vue-storefront
 
 ### Adding labels/annotations for Topology View
