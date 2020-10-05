@@ -108,7 +108,7 @@
     "port": 8080
   },
   "api": {
-    "url": "http://vue-storefront-api:8080",
+    "url": "http://vue-storefront-api-vue-storefront.apps-crc.testing",
     "saveBandwidthOverCache": true
   },
   "elasticsearch": {
@@ -720,7 +720,7 @@
     "endpoint": "/api/user",
     "history_endpoint": "/api/user/order-history?token={{token}}&pageSize={{pageSize}}&currentPage={{currentPage}}",
     "resetPassword_endpoint": "/api/user/reset-password",
-    "createPassword_endpoint": "http://vue-storefront-api:8080/api/user/create-password",
+    "createPassword_endpoint": "/api/user/create-password",
     "changePassword_endpoint": "/api/user/change-password?token={{token}}",
     "login_endpoint": "/api/user/login",
     "create_endpoint": "/api/user/create",
