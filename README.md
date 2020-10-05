@@ -24,7 +24,7 @@ Follow the instruction as in [Vue Storefront API](https://github.com/jcordes73/v
 	git clone https://github.com/jcordes73/vue-storefront-openshift
 	cd vue-storefront-openshift
 
-### Installing Vue Storefront API
+### Installing Vue Storefront
 
 	oc new-app https://github.com/jcordes73/vue-storefront-openshift --name vue-storefront --env-file=default.env
 	oc expose svc vue-storefront
