@@ -17,7 +17,7 @@ The installation of Red Hat OpenShift Container Platform is not part of this pro
 
 ### Installing Vue Storefront API
 
-Follow the instruction as in [Vue Storefront API](://github.com/jcordes73/vue-storefront-openshift-api).
+Follow the instruction as in [Vue Storefront API](https://github.com/jcordes73/vue-storefront-openshift-api).
 
 ### Cloning of the Vue Storefront for OpenShift repository
 
