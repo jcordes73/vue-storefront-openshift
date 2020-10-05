@@ -22,7 +22,7 @@ Follow the instruction as in [Vue Storefront API](://github.com/jcordes73/vue-st
 ### Cloning of the Vue Storefront for OpenShift repository
 
 	git clone https://github.com/jcordes73/vue-storefront-openshift
-        cd vue-storefront-openshift
+	cd vue-storefront-openshift
 
 ### Installing Vue Storefront API
 
