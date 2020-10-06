@@ -68,5 +68,5 @@ As the Magento 2 container (bitnami/magento) uses elevated priviliges, you need 
 
 Now you can deploy the Magento 2 container
 
-	oc new-app bitnami/magento --name magento -e MAGENTO_DATABASE_NAME="bitnami_magento" -e  MAGENTO_DATABASE_USER="bn_magento" -e MAGENTO_DATABASE_PASSWORD="pass"
-	oc annotate deployment/magento app.openshift.io/connects-to=mariadb
+        oc new-app php:7.3~https://github.com/jcordes73/magento2#2.3 --name magento
+	oc annotate deployment magento app.openshift.io/connects-to=vue-storefront-api,mariadb
