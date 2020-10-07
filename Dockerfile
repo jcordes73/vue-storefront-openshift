@@ -7,8 +7,7 @@ WORKDIR /opt/app-root/src
 COPY . .
 
 RUN \
-    npm set registry $NPM_MIRROR \
-    && npm install --global yarn \
+    npm install --global yarn \
     && yarn global add lerna \
     && git submodule add -b master https://github.com/DivanteLtd/vsf-default.git src/themes/default \
     && git submodule update --init --remote \
