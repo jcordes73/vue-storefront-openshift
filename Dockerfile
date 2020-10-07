@@ -12,9 +12,9 @@ RUN \
     && git submodule add -b master https://github.com/DivanteLtd/vsf-default.git src/themes/default \
     && git submodule update --init --remote \
     && yarn install \
-    #&& yarn add vue-gtm@2.2.0 -W \
-    #&& yarn cache clean \
-    #&& yarn add again -W \
+    && yarn add vue-gtm@2.2.0 -W \
+    && yarn cache clean \
+    && yarn add again -W \
     && yarn cache clean \
     && lerna bootstrap \
     && yarn build
