@@ -17,7 +17,9 @@ RUN \
     && yarn add again -W \
     && yarn cache clean \
     && lerna bootstrap \
-    && yarn build
+    && yarn build \
+    && yarn cache clean \
+    && yarn cypress cache clear
 
 COPY vue-storefront.sh /usr/local/bin/
 
