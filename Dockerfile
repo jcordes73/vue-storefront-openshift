@@ -6,9 +6,6 @@ WORKDIR /opt/app-root/src
 
 COPY . .
 COPY vue-storefront.sh /usr/local/bin/
-RUN chown -R 1001:0 /opt/app-root/src
-
-USER 1001
 
 RUN \
     npm install --global yarn \
@@ -24,6 +21,11 @@ RUN \
     && yarn cache clean \
     && yarn cypress cache clear
 
+RUN chown -R 1001:0 /opt/app-root/src \
+    && chmod -R 775 /opt/app-root/src
+
 EXPOSE 3000
+
+USER 1001
 
 CMD ["vue-storefront.sh"]
