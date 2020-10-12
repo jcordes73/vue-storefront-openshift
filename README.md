@@ -26,7 +26,7 @@ Follow the instruction as in [Vue Storefront API](https://github.com/jcordes73/v
 
 In config/openshift.json you need to change the URL of the Vue Storefront API URL:
 
-	VS_API_URL=http://`oc get route vue-storefront -o json | jq .spec.host -r`
+	VS_API_URL=http://`oc get route vue-storefront-api -o json | jq .spec.host -r`
 	jq ".api.url=\"$VS_API_URL\"" config/openshift.json > config/openshift.json.tmp
 	mv config/openshift.json.tmp config/openshift.json
 

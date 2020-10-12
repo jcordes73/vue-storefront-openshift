@@ -73,13 +73,32 @@
   },
   "initialResources": [
     {
-      "filters": ["vsf-newsletter-modal", "vsf-languages-modal", "vsf-layout-empty", "vsf-layout-minimal", "vsf-order-confirmation", "vsf-search-panel"],
+      "filters": [
+        "vsf-newsletter-modal",
+        "vsf-languages-modal",
+        "vsf-layout-empty",
+        "vsf-layout-minimal",
+        "vsf-order-confirmation",
+        "vsf-search-panel"
+      ],
       "type": "script",
       "onload": true,
       "rel": "prefetch"
     },
     {
-      "filters": ["vsf-category", "vsf-home", "vsf-not-found", "vsf-error", "vsf-product", "vsf-cms", "vsf-checkout", "vsf-compare", "vsf-my-account", "vsf-static", "vsf-reset-password"],
+      "filters": [
+        "vsf-category",
+        "vsf-home",
+        "vsf-not-found",
+        "vsf-error",
+        "vsf-product",
+        "vsf-cms",
+        "vsf-checkout",
+        "vsf-compare",
+        "vsf-my-account",
+        "vsf-static",
+        "vsf-reset-password"
+      ],
       "type": "script",
       "onload": true,
       "rel": "prefetch"
@@ -668,18 +687,28 @@
     "priceFilterKey": "final_price",
     "priceFilters": {
       "ranges": [
-        { "from": 0, "to": 50 },
-        { "from": 50, "to": 100 },
-        { "from": 100, "to": 150 },
-        { "from": 150 }
+        {
+          "from": 0,
+          "to": 50
+        },
+        {
+          "from": 50,
+          "to": 100
+        },
+        {
+          "from": 100,
+          "to": 150
+        },
+        {
+          "from": 150
+        }
       ]
     }
   },
   "orders": {
     "directBackendSync": true,
     "endpoint": "/api/order",
-    "payment_methods_mapping": {
-    },
+    "payment_methods_mapping": {},
     "offline_orders": {
       "automatic_transmission_enabled": false,
       "notification": {
@@ -726,7 +755,12 @@
     "create_endpoint": "/api/user/create",
     "me_endpoint": "/api/user/me?token={{token}}",
     "refresh_endpoint": "/api/user/refresh",
-    "allowModification": ["firstname", "lastname", "email", "addresses"],
+    "allowModification": [
+      "firstname",
+      "lastname",
+      "email",
+      "addresses"
+    ],
     "tokenInHeader": false
   },
   "stock": {
@@ -847,7 +881,9 @@
       "filter": [
         {
           "key": "category.name",
-          "value": { "eq": "Performance Fabrics" }
+          "value": {
+            "eq": "Performance Fabrics"
+          }
         }
       ]
     },
@@ -855,7 +891,9 @@
       "filter": [
         {
           "key": "new",
-          "value": { "eq": 1 }
+          "value": {
+            "eq": 1
+          }
         }
       ]
     },
@@ -863,7 +901,9 @@
       "filter": [
         {
           "key": "category.name",
-          "value": { "eq": "Tees" }
+          "value": {
+            "eq": "Tees"
+          }
         }
       ]
     }
@@ -874,13 +914,13 @@
     "map_endpoint": "/api/url/map"
   },
   "fastly": {
-    "enabled":false
+    "enabled": false
   },
   "nginx": {
-    "enabled":false
+    "enabled": false
   },
   "varnish": {
-    "enabled":false
+    "enabled": false
   },
   "purgeConfig": [
     "server.invalidateCacheKey",
