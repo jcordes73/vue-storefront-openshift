@@ -7,6 +7,7 @@ WORKDIR /opt/app-root/src
 COPY . .
 COPY vue-storefront.sh /usr/local/bin/
 
+RUN test -z "$NPM_MIRROR" || npm config set registry $NPM_MIRROR
 RUN \
     npm install --global yarn \
     && yarn global add lerna \
