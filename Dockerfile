@@ -8,8 +8,7 @@ COPY . .
 COPY vue-storefront.sh /usr/local/bin/
 
 RUN test -z "$NPM_MIRROR" || npm config set registry $NPM_MIRROR
-RUN \
-    npm install --global yarn \
+RUN npm install --global yarn \
     && yarn global add lerna \
     && git submodule add -b master https://github.com/DivanteLtd/vsf-default.git src/themes/default \
     && git submodule update --init --remote \
@@ -22,8 +21,7 @@ RUN \
     && yarn cache clean \
     && yarn cypress cache clear
 
-RUN chown -R 1001:0 /opt/app-root/src \
-    && chmod -R 775 /opt/app-root/src
+RUN chown -R 1001:0 /opt/app-root/src && chmod -R 777 /opt/app-root/src
 
 EXPOSE 3000
 
