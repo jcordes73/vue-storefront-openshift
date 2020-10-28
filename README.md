@@ -4,6 +4,24 @@
 
 This project contains a version of the [Vue Storefront](https://github.com/DivanteLtd/vue-storefront) deployable on [Red Hat OpenShift Container Platform](https://www.openshift.com/products/container-platform).
 
+## Pre-requistes
+
+### Git client
+
+To checkout the projects from Github, install a git client on RHEL 8 like this:
+
+	yum install -y git
+
+### OpenShift Client (oc)
+
+You can download the OpenShift Client 4.5 [here](https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.5/linux/oc.tar.gz)
+
+### jq
+
+For modification of JSON config files we use jq, install it like this on RHEL 8:
+
+	yum install -y jq
+
 ## Installation
 
 The installation of the Vue Storefront consists of the following parts
