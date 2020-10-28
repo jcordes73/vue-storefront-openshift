@@ -770,7 +770,7 @@
   },
   "images": {
     "useExactUrlsNoProxy": false,
-    "baseUrl": "https://demo.vuestorefront.io/img/",
+    "baseUrl": "http://vue-storefront-api-vue-storefront.apps-crc.testing/img/",
     "useSpecificImagePaths": false,
     "paths": {
       "product": "/catalog/product"
